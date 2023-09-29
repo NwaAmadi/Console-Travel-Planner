@@ -13,6 +13,7 @@ def Flights(Airline, AirlineDepertureDate, CustomerName):
 def ConvertDate():
     pass
 
+#Takes two dates as parameters and returns their customized string format
 def generateDate(start_date, end_date):
     start_date = datetime.datetime.strptime(start_date, "%Y-%m-%d")
     end_date = datetime.datetime.strptime(end_date, "%Y-%m-%d")
@@ -21,6 +22,7 @@ def generateDate(start_date, end_date):
     random_date = start_date + datetime.timedelta(days = random_days)
     return random_date.strftime("%Y-%m-%d")
 
+#This function returns the current time @ the time of call
 def CurrentTime():
     now = datetime.datetime.now()
     return(now.strftime("%A, %B %d, %Y %I:%M:%S %p"))
@@ -31,6 +33,7 @@ def getJet():
     randomJet = random.choice(jetlist)
     return(randomJet)
   
+#This function takes data from two text files and writes them into a new file.
 def writefile(outfile, BookingDetails):
   file1 = open(outfile, "r")
   file2 = open(BookingDetails, "r")
