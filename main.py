@@ -81,6 +81,7 @@ while(True):
           CF = str(input("Are you sure you want to cancel your flight? Y/N: "))
           CF = CF.lower()
           if (CF == "y"):
+              #Deleting outfile.txt
               os.remove("outfile.txt")
               print("Your booking records have been deleted successfully")
           else:
